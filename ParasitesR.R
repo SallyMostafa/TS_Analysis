@@ -29,7 +29,7 @@ print(dim(all));
 all = t(all)
 #print(all)
 colnames(all) = labels
-#distMatrix <- dist(all, method="euclidean")
+#distMatrix <- dist(t(all), method="euclidean")
 distMatrix <- dist(t(all), method="DTW")
 print(distMatrix)
 hc <- hclust(distMatrix, method="average")
